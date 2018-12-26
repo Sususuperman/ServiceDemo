@@ -57,13 +57,13 @@ public class Service2MessageActivity extends AppCompatActivity {
     }
 
     private void bind() {
-        bindService(new Intent(this,MyMessageService.class),messengerConnection, Service.BIND_AUTO_CREATE);
+        bindService(new Intent(this,MyMessageService.class),messengerConnection, BIND_AUTO_CREATE);
     }
 
     public void send(View view) {
         String str = content.getText().toString();
         Message msg = Message.obtain();
-        msg.what = MyMessageService.MSG_FROM_SERVER_TO_CLIENT;
+        msg.what = MyMessageService.MSG_FROM_CLIENT_TO_SERVER;
         msg.obj = str==""?"空消息":str;
 
         msg.replyTo = mClientMessenger;//指定回信人是客户端定义的
