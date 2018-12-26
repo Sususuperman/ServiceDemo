@@ -55,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.unbind:
                 unbindService(connection);
                 break;
+                case R.id.mess:
+                    startActivity(new Intent(this,Service2MessageActivity.class));
+                    break;
         default:
         break;}
 

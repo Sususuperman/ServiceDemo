@@ -53,4 +53,13 @@
         app:layout_constraintLeft_toLeftOf="@id/bind"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/stop" />
+
+    <Button
+        android:id="@+id/mess"
+        android:text="使用Messenger实现跨进程通信，简易的AIDL"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:onClick="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>
